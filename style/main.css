@@ -1,3 +1,18 @@
+#site-header {
+    position: fixed;
+    /* height: 52px; */
+    /* background: #fff; */
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all .3s ease;
+    box-shadow: 0 1px 25px rgba(0, 0, 0, .1);
+}
+
+#site-header.hide {
+    top: -53px;
+}
+
 :root {
     --vermelho: #e50914;
     --preta: #141414;
@@ -26,7 +41,7 @@ header {
     z-index: 1;
     background: black;
     color: white;
-    padding: 0 20px;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -38,23 +53,25 @@ header .container {
 }
 
 header .logo {
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
     color: var(--vermelho);
     font-family: 'Arial Black', Times;
     font-size: 40px;
 }
 
-.net-logo {
+header .net-logo {
     width: 120px;
     max-height: 120px;
+    margin: 0;
+    padding: 0 0 0 0;
 }
 
 header nav a {
     color: #aaa;
     font-size: 15px;
     text-decoration: none;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     padding-left: 10px;
     font-family: 'Arial', Times;
     font-weight: bold;
@@ -84,8 +101,8 @@ header nav a:hover {
 }
 
 h2 {
-    font-size: 30px;
-    font-family: 'Arial Black', Times;
+    font-size: 20px;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .item-box {
@@ -96,15 +113,17 @@ h2 {
 /* Filme principal */
 
 .filme-principal {
+    margin-top: 50px;
     font-size: 16px;
     background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50) 100%), url('../assets/capa-house.jpg');
-    height: 600px;
+    height: 50vh;
+    /* height: 100%; */
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* margin-bottom: 20px; */
+    margin-bottom: 1%;
 }
 
 .filme-principal .descricao {
@@ -120,6 +139,8 @@ h2 {
 }
 
 .botao {
+    /* height: 50px; */
+    justify-content: center;
     background-color: rgba(0, 0, 0, .50);
     border: none;
     color: #fff;
@@ -189,64 +210,58 @@ h2 {
 }
 
 .footer-text {
-    display: inline-block;
+    position: relative;
+    display: block;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 50px;
 }
 
 /* justify-content: space-between; */
 
 .footer-text .footer-info-1 a {
-    display: flex;
-    font-size: 16px;
-    color: #aaa;
+    width: 25%;
+    float: left;
+    padding: 20px;
     text-decoration: none;
-    flex-direction: column;
-    align-items: left;
-    font-family: 'Arial', Times;
-    font-weight: bold;
-    justify-content: space-between;
+    color: grey;
 }
 
 .footer-text .footer-info-1 a:hover {
-    color: #fff;
+    color: grey;
 }
 
 .footer-text .footer-info-2 a {
-    display: flex;
-    font-size: 16px;
-    color: #aaa;
-    flex-direction: column;
-    align-items: left;
+    width: 25%;
+    float: left;
+    padding: 20px;
     text-decoration: none;
-    font-family: 'Arial', Times;
-    font-weight: bold;
-    justify-content: space-between;
+    color: grey;
 }
 
 .footer-text .footer-info-3 a {
-    display: flex;
-    font-size: 16px;
-    color: #aaa;
-    flex-direction: column;
-    align-items: left;
+    width: 25%;
+    float: left;
+    padding: 20px;
     text-decoration: none;
-    font-family: 'Arial', Times;
-    font-weight: bold;
-    justify-content: space-between;
+    color: grey;
 }
 
 .footer-text .footer-info-4 a {
-    display: flex;
-    font-size: 16px;
-    color: #aaa;
-    flex-direction: column;
-    align-items: left;
+    width: 25%;
+    float: left;
+    padding: 10px;
     text-decoration: none;
-    font-family: 'Arial', Times;
-    font-weight: bold;
-    justify-content: space-between;
+    color: grey;
+}
+
+footer .icon-footer a {
+    display: inline-block;
+    flex-direction: row;
+    align-items: left;
+    justify-content: center;
+    margin-left: 60px;
 }
